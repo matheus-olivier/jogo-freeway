@@ -1,6 +1,6 @@
 //codigo do ator
 let xAtor = 85;
-let yAtor = 365;
+let yAtor = 366;
 let colisao = false;
 let meusPontos = 0;
 
@@ -13,7 +13,9 @@ function movimentaAtor(){
     yAtor -= 3
   }
   if (keyIsDown(DOWN_ARROW)){
-    yAtor += 3
+    if(podeSeMover()){
+      yAtor += 3
+    } 
   }
 }
 
@@ -23,6 +25,9 @@ function verificaColisao(){
     colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor, 15)
     if (colisao){
       voltaAtorParaPosicaoInicial();
+      if(pontosMaiorQueZero()){
+        meusPontos -= 1;
+      }
     }
   }
 }
@@ -45,11 +50,10 @@ function marcaPonto(){
   }
 }
 
+function pontosMaiorQueZero(){
+  return meusPontos > 0
+}
 
-
-
-
-
-
-
-
+function podeSeMover(){
+ return yAtor < 366; 
+}
