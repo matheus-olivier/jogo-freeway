@@ -1,5 +1,6 @@
 # jogo Freeway
 https://editor.p5js.org/King_Potato/full/_6_sy9gVE
+
 Freeway é um jogo clássico de videogame lançado em 1981 para o console Atari 2600. Foi criado por David Crane, um dos fundadores da empresa de jogos Activision.
 
 O jogo consiste em atravessar uma rodovia movimentada, desviando dos carros que passam em alta velocidade. O objetivo é fazer com que o personagem chegue ao outro lado da rodovia sem ser atropelado.
